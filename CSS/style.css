@@ -1,0 +1,35 @@
+/*reset CSS*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*Colores principales*/
+
+:root{
+    --color-main: rgb(68, 88, 100);
+    --color-menu: rgba(123,231,243,1);
+    --color-texto: rgb(100, 185, 195);
+    --color-texto2: rgb(255, 255, 255);
+    --color-encabezado: rgb(245, 245, 220);
+}
+
+/*Estilos de index*/
+
+body{
+    background-color: var(--color-main);
+}
+
+/*Header*/
+.oculto {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
