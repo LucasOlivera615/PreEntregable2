@@ -9,9 +9,9 @@
 /*Colores principales*/
 
 :root{
-    --color-main: rgb(68, 88, 100);
-    --color-menu: rgba(123, 231, 243, 0.5);
-    --color-texto: rgba(100, 186, 195, 0);
+    --color-fondo: rgb(68, 88, 100);
+    --color-menu: rgba(123,231,243,1);
+    --color-texto: rgb(100, 185, 195);
     --color-texto2: rgb(255, 255, 255);
     --color-encabezado: rgb(245, 245, 220);
 }
@@ -19,7 +19,7 @@
 /*Estilos de index*/
 
 body{
-    background-color: var(--color-main);
+    background-color: var(--color-fondo); /*Temporal, color que aplico en el body mientras trabajo para no molestar a la vista*/
 }
 
 /*Header*/
@@ -58,4 +58,26 @@ body{
         -1px  1px 0 black,
          1px  1px 0 black;
     font-size: 2.5rem;
+}
+
+.PanFontTitles {
+    font-family: "Bebas Neue", sans-serif;
+    color: var(--color-texto);
+    text-shadow: 
+        -1px -1px 0 black,  
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;
+    font-size: 1.9rem;
+}
+
+.PanTxt{
+    font-family: "Roboto", sans-serif;
+    font-size: 1.2rem;
+    color: var(--color-texto2);
+    text-shadow: 
+        -1px -1px 0 black,  
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;
 }
