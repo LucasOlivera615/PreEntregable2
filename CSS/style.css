@@ -10,8 +10,8 @@
 
 :root{
     --color-main: rgb(68, 88, 100);
-    --color-menu: rgba(123,231,243,1);
-    --color-texto: rgb(100, 185, 195);
+    --color-menu: rgba(123, 231, 243, 0.5);
+    --color-texto: rgba(100, 186, 195, 0);
     --color-texto2: rgb(255, 255, 255);
     --color-encabezado: rgb(245, 245, 220);
 }
@@ -32,4 +32,30 @@ body{
     overflow: hidden;
     clip: rect(0,0,0,0);
     border: 0;
+}
+
+.PanNavColor {
+    background-color: var(--color-encabezado);
+}
+
+.cambio:hover{
+    background-color: rgba(45, 46, 46, 0.349);
+    text-shadow: 
+        -1px -1px 0 var(--color-menu),  
+         1px -1px 0 var(--color-menu),
+        -1px  1px 0 var(--color-menu),
+         1px  1px 0 var(--color-menu);
+    color: black;
+}
+
+.PanFontNav {
+    text-decoration: none;
+    color: var(--color-menu);
+    font-family: "Bebas Neue", sans-serif;
+    text-shadow: 
+        -1px -1px 0 black,  
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;
+    font-size: 2.5rem;
 }
