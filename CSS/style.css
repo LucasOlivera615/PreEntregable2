@@ -18,9 +18,6 @@
 
 /*Estilos de index*/
 
-body{
-    background-color: var(--color-fondo); /*Temporal, color que aplico en el body mientras trabajo para no molestar a la vista*/
-}
 
 /*Header*/
 .oculto {
@@ -60,15 +57,10 @@ body{
     font-size: 2.5rem;
 }
 
-.PanFontTitles {
-    font-family: "Bebas Neue", sans-serif;
-    color: var(--color-texto);
-    text-shadow: 
-        -1px -1px 0 black,  
-         1px -1px 0 black,
-        -1px  1px 0 black,
-         1px  1px 0 black;
-    font-size: 1.9rem;
+/*Estilos del Main*/
+
+.PanMainColor {
+    background-color: var(--color-fondo);
 }
 
 .PanTxt{
@@ -81,3 +73,51 @@ body{
         -1px  1px 0 black,
          1px  1px 0 black;
 }
+
+.PanFontTitles {
+    font-family: "Bebas Neue", sans-serif;
+    color: var(--color-texto);
+    text-shadow: 
+        -1px -1px 0 black,  
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;
+    font-size: 1.9rem;
+}
+
+.PanButStyle{
+    color: var(--color-menu);
+    background-color: var(--color-encabezado);
+    border-radius: 5px;
+    padding: 3px 10px;
+}
+
+.PanButStyle:hover {
+    color: var(--color-encabezado);
+    background-color: var(--color-menu);
+}
+
+#gymsearcher {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+  
+  #gymsearcher:hover {
+    box-shadow: 0 0 5px var(--color-fondo);
+    border-color: var(--color-encabezado);
+  }
+  
+  #gymsearcher:focus {
+    outline: none;
+    box-shadow: 0 0 30px var(--color-menu);
+    border-color: var(--color-fondo);
+  }
+  
+  .PanMapStyle {
+    border: 2px solid black;
+    border-radius: 30px;
+    max-width: 100%;
+    max-width: 600px;
+  }
