@@ -19,6 +19,7 @@
 /*Estilos de index*/
 
 
+  
 /*Header*/
 .oculto {
     position: absolute;
@@ -59,7 +60,12 @@
 
 /*Estilos del Main*/
 
-.PanMainColor {
+main {
+    flex: 1;
+  }
+  
+
+.PanMainStyle {
     background-color: var(--color-fondo);
 }
 
@@ -121,3 +127,5 @@
     max-width: 100%;
     max-width: 600px;
   }
+
+  /*Estilos del Footer*/
