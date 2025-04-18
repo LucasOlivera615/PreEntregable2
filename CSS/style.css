@@ -161,3 +161,23 @@ main {
             padding-block: 4rem;
         }
     }
+
+    /*Estilos de Sobre-Nosotros*/
+
+    .PanFontSubTitles {
+        font-family: "Bebas Neue", sans-serif;
+        color: var(--color-texto);
+        text-shadow: 
+            -1px -1px 0 black,  
+             1px -1px 0 black,
+            -1px  1px 0 black,
+             1px  1px 0 black;
+        font-size: 1.5rem;
+    }
+
+    .PanImgTutoStyle{
+        border: 2px solid black;
+        border-radius: 30px;
+        max-width: 100%;
+        max-width: 800px;
+    }
