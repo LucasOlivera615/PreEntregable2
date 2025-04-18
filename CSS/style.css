@@ -76,10 +76,11 @@ main {
     flex: 1;
     padding-block: 1rem;
   }
-  
 
 .PanMainStyle {
     background-color: var(--color-fondo);
+    flex: 1;
+    padding-block: 1rem;
 }
 
 .PanTxt{
@@ -180,4 +181,9 @@ main {
         border-radius: 30px;
         max-width: 100%;
         max-width: 800px;
+    }
+
+    .PanRedesStyle{
+        border: 2px solid black;
+        border-radius: 10px;
     }
