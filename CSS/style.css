@@ -183,7 +183,60 @@ main {
         max-width: 800px;
     }
 
-    .PanRedesStyle{
-        border: 2px solid black;
-        border-radius: 10px;
+    /*Estilos de contacto*/
+
+    .PanRedes{
+        text-decoration: none;
+    }
+
+    .PanFontRedes{
+        font-size: 50px;
+    }
+
+    .PanInstagramBorder{
+        border: 5px solid rgba(208,29,194,255);
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    .PanInstagram{
+        background-color: rgba(254,122,34,255);
+        color: rgba(252,19,107,255);
+    }
+
+    .PanFacebookBorder{
+        border: 5px solid rgba(2,23,93,255);
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    .PanFacebook{
+        background-color: rgba(47,116,248,255);
+        color: rgba(233,240,254,255);
+    }
+
+    .PanTikTokBorder{
+        border: 5px solid rgba(42,240,234,255);
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    .PanTikTok {
+        background-color: black;
+        color: rgba(254,40,88,255);
+    }
+
+    .PanInstagram:hover{
+        background-color: var(--color-encabezado);
+        color: var(--color-menu);
+    }
+
+    .PanFacebook:hover{
+        background-color: var(--color-encabezado);
+        color: var(--color-menu);
+    }
+
+    .PanTikTok:hover{
+        background-color: var(--color-encabezado);
+        color: var(--color-menu);
     }
