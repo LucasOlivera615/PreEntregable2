@@ -240,3 +240,14 @@ main {
         background-color: var(--color-encabezado);
         color: var(--color-menu);
     }
+
+    /*Estilos Inicio de Sesión y Profesores*/
+
+    .PanFontIDSyProfes:hover{
+        text-shadow: 
+        -1px -1px 0 var(--color-menu),  
+         1px -1px 0 var(--color-menu),
+        -1px  1px 0 var(--color-menu),
+         1px  1px 0 var(--color-menu);
+        color: black;
+    }
