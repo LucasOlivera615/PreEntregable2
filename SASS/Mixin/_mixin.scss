@@ -1,0 +1,46 @@
+@use '../Variables/colores.scss' as *;
+
+@mixin button-colour ($bg, $color) {
+    background-color: $bg;
+    color: $color;
+}
+
+@mixin button-border-colour ($color) {
+    border: 5px solid $color;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+@mixin button-style-change {
+    background-color: $color-head-foot;
+    color: $color-menu;
+}
+
+@mixin txt-border {
+    text-shadow: 
+        -1px -1px 0 black,  
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;
+}
+
+@mixin nav-text-border {
+    text-shadow: 
+        -1px -1px 0 $color-menu,  
+         1px -1px 0 $color-menu,
+        -1px  1px 0 $color-menu,
+         1px  1px 0 $color-menu;
+    color: black;
+}
+
+@mixin button-border-style($color, $width: 5px, $radius: 20px) {
+    border: $width solid $color;
+    border-radius: $radius;
+    overflow: hidden;
+}
+
+@mixin button-style ($bg-color, $color) {
+    background-color: $bg-color;
+    color: $color;
+    transition: background-color 0.3s ease-in-out;
+}

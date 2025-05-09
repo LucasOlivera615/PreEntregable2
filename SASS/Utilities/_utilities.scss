@@ -1,0 +1,39 @@
+@use '../Variables/variables' as *;
+@use '../Mixin/mixin' as mix;
+
+//Esto oculta nuestro h1
+
+.oculto {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+//Cambio de color del fondo del footer y el header
+
+.PanNavColor {
+    background-color: $color-head-foot;
+}
+
+//Fuente de texto de la página en general
+
+.PanTxt{
+    font-family: $fuente-titulo;
+    font-size: 1.2rem;
+    color: $color-texto2;
+    @include mix.txt-border;
+}
+
+//Texto default del texto del menú de navegación
+
+.PanFontNav {
+    text-decoration: none;
+    color: $color-menu;
+    font-family: $fuente-texto;
+    @include mix.txt-border;
+}

@@ -1,0 +1,44 @@
+@use '../Variables/colores.scss' as *;
+
+//Botones
+
+.PanButStyle{
+    color: $color-menu;
+    background-color: $color-head-foot;
+    border-radius: 5px;
+    padding: 3px 10px;
+    
+    &:hover{
+        color: $color-head-foot;
+        background-color: $color-menu;
+    }
+}
+
+//Barras de búsqueda
+
+#gymsearcher{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+
+    &:hover{
+        box-shadow: 0 0 5px $color-fondo;
+        border-color: $color-head-foot;
+      }
+
+    &:focus{
+        outline: none;
+        box-shadow: 0 0 30px $color-menu;
+        border-color: $color-fondo;
+      }
+}
+
+//Estilo del mapa
+
+.PanMapStyle {
+    border: 2px solid black;
+    border-radius: 30px;
+    max-width: 100%;
+    max-width: 600px;
+  }

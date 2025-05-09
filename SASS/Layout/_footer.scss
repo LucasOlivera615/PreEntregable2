@@ -1,0 +1,13 @@
+@use '../Variables/colores' as *;
+@use '../Mixin/mixin' as mix;
+
+footer {
+    
+    .PanFontFootSize {
+        font-size: 1.2rem;
+        
+        &:hover{
+            @include mix.nav-text-border;
+        }
+    }
+}

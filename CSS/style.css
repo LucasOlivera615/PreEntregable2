@@ -1,253 +1,187 @@
-/*reset CSS*/
-
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-/*Colores principales*/
-
-:root{
-    --color-fondo: rgb(68, 88, 100);
-    --color-menu: rgba(123,231,243,1);
-    --color-texto: rgb(100, 185, 195);
-    --color-texto2: rgb(255, 255, 255);
-    --color-encabezado: rgb(245, 245, 220);
-}
-
-/*Estilos de index*/
-
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    display: flex;
-    flex-direction: column;
-  }
-
-/*Header*/
+@charset "UTF-8";
 .oculto {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0,0,0,0);
-    border: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 .PanNavColor {
-    background-color: var(--color-encabezado);
+  background-color: rgb(245, 245, 220);
 }
 
-.cambio:hover{
-    background-color: rgba(45, 46, 46, 0.349);
-    text-shadow: 
-        -1px -1px 0 var(--color-menu),  
-         1px -1px 0 var(--color-menu),
-        -1px  1px 0 var(--color-menu),
-         1px  1px 0 var(--color-menu);
-    color: black;
+.PanTxt {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  color: rgb(255, 255, 255);
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
 
 .PanFontNav {
-    text-decoration: none;
-    color: var(--color-menu);
-    font-family: "Bebas Neue", sans-serif;
-    text-shadow: 
-        -1px -1px 0 black,  
-         1px -1px 0 black,
-        -1px  1px 0 black,
-         1px  1px 0 black;
+  text-decoration: none;
+  color: rgb(123, 231, 243);
+  font-family: "Bebas Neue", sans-serif;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
 
-.PanFontNavSize {
-    font-size: 2.5rem;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-/*Estilos del Main*/
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 
-main {
-    flex: 1;
-    padding-block: 1rem;
-  }
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+header .cambio:hover {
+  background-color: rgba(45, 46, 46, 0.349);
+  text-shadow: -1px -1px 0 rgb(123, 231, 243), 1px -1px 0 rgb(123, 231, 243), -1px 1px 0 rgb(123, 231, 243), 1px 1px 0 rgb(123, 231, 243);
+  color: black;
+}
+header .PanFontNavSize {
+  font-size: 2.5rem;
+}
 
 .PanMainStyle {
-    background-color: var(--color-fondo);
-    flex: 1;
-    padding-block: 1rem;
+  background-color: rgb(68, 88, 100);
+  flex: 1;
+  padding-block: 1rem;
+}
+.PanMainStyle .PanFontTitles {
+  font-family: "Bebas Neue", sans-serif;
+  color: rgb(100, 185, 195);
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  font-size: 1.9rem;
 }
 
-.PanTxt{
-    font-family: "Roboto", sans-serif;
-    font-size: 1.2rem;
-    color: var(--color-texto2);
-    text-shadow: 
-        -1px -1px 0 black,  
-         1px -1px 0 black,
-        -1px  1px 0 black,
-         1px  1px 0 black;
+@media (min-width: 768px) and (min-height: 1024px) {
+  main {
+    padding-block: 4rem;
+  }
+}
+/*Estilos del main Sobre nosotros*/
+.PanMainStyle .PanFontSubTitles {
+  font-family: "Bebas Neue", sans-serif;
+  color: rgb(100, 185, 195);
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  font-size: 1.5rem;
+}
+.PanMainStyle .PanImgTutoStyle {
+  border: 2px solid black;
+  border-radius: 30px;
+  max-width: 100%;
+  max-width: 800px;
 }
 
-.PanFontTitles {
-    font-family: "Bebas Neue", sans-serif;
-    color: var(--color-texto);
-    text-shadow: 
-        -1px -1px 0 black,  
-         1px -1px 0 black,
-        -1px  1px 0 black,
-         1px  1px 0 black;
-    font-size: 1.9rem;
+/*Estilos del main Contacto*/
+.PanMainStyle .PanRedes {
+  text-decoration: none;
+}
+.PanMainStyle .PanFontRedes {
+  font-size: 50px;
 }
 
-.PanButStyle{
-    color: var(--color-menu);
-    background-color: var(--color-encabezado);
-    border-radius: 5px;
-    padding: 3px 10px;
+.PanMainStyle .PanInstagram {
+  background-color: rgb(254, 122, 34);
+  color: rgb(252, 19, 107);
+  transition: background-color 0.3s ease-in-out;
+}
+.PanMainStyle .PanInstagram:hover {
+  background-color: rgb(245, 245, 220);
+  color: rgb(123, 231, 243);
+}
+.PanMainStyle .PanFacebook {
+  background-color: rgb(47, 116, 248);
+  color: rgb(233, 240, 254);
+  transition: background-color 0.3s ease-in-out;
+}
+.PanMainStyle .PanFacebook:hover {
+  background-color: rgb(245, 245, 220);
+  color: rgb(123, 231, 243);
+}
+.PanMainStyle .PanTikTok {
+  background-color: black;
+  color: rgb(254, 40, 88);
+  transition: background-color 0.3s ease-in-out;
+}
+.PanMainStyle .PanTikTok:hover {
+  background-color: rgb(245, 245, 220);
+  color: rgb(123, 231, 243);
+}
+.PanMainStyle .PanInstagramBorder {
+  border: 5px solid rgb(208, 29, 194);
+  border-radius: 20px;
+  overflow: hidden;
+}
+.PanMainStyle .PanFacebookBorder {
+  border: 5px solid rgb(2, 23, 93);
+  border-radius: 20px;
+  overflow: hidden;
+}
+.PanMainStyle .PanTikTokBorder {
+  border: 5px solid rgb(42, 240, 234);
+  border-radius: 20px;
+  overflow: hidden;
 }
 
+/*Estilos del main Profesores e Inicio de sesión*/
+.PanMainStyle .PanFontNav:hover {
+  text-shadow: -1px -1px 0 rgb(123, 231, 243), 1px -1px 0 rgb(123, 231, 243), -1px 1px 0 rgb(123, 231, 243), 1px 1px 0 rgb(123, 231, 243);
+  color: black;
+}
+
+footer .PanFontFootSize {
+  font-size: 1.2rem;
+}
+footer .PanFontFootSize:hover {
+  text-shadow: -1px -1px 0 rgb(123, 231, 243), 1px -1px 0 rgb(123, 231, 243), -1px 1px 0 rgb(123, 231, 243), 1px 1px 0 rgb(123, 231, 243);
+  color: black;
+}
+
+.PanButStyle {
+  color: rgb(123, 231, 243);
+  background-color: rgb(245, 245, 220);
+  border-radius: 5px;
+  padding: 3px 10px;
+}
 .PanButStyle:hover {
-    color: var(--color-encabezado);
-    background-color: var(--color-menu);
+  color: rgb(245, 245, 220);
+  background-color: rgb(123, 231, 243);
 }
 
 #gymsearcher {
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 5px 10px;
-    transition: box-shadow 0.3s ease, border-color 0.3s ease;
-  }
-  
-  #gymsearcher:hover {
-    box-shadow: 0 0 5px var(--color-fondo);
-    border-color: var(--color-encabezado);
-  }
-  
-  #gymsearcher:focus {
-    outline: none;
-    box-shadow: 0 0 30px var(--color-menu);
-    border-color: var(--color-fondo);
-  }
-  
-  .PanMapStyle {
-    border: 2px solid black;
-    border-radius: 30px;
-    max-width: 100%;
-    max-width: 600px;
-  }
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px 10px;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+#gymsearcher:hover {
+  box-shadow: 0 0 5px rgb(68, 88, 100);
+  border-color: rgb(245, 245, 220);
+}
+#gymsearcher:focus {
+  outline: none;
+  box-shadow: 0 0 30px rgb(123, 231, 243);
+  border-color: rgb(68, 88, 100);
+}
 
-  /*Estilos del Footer*/
+.PanMapStyle {
+  border: 2px solid black;
+  border-radius: 30px;
+  max-width: 100%;
+  max-width: 600px;
+}
 
-    .PanFontFootSize {
-        font-size: 1.2rem;
-    }
-  
-    .PanFontFootSize:hover{
-        text-shadow: 
-        -1px -1px 0 var(--color-menu),  
-         1px -1px 0 var(--color-menu),
-        -1px  1px 0 var(--color-menu),
-         1px  1px 0 var(--color-menu);
-        color: black;
-    }
-
-    @media (min-width: 768px) and (min-height: 1024px) {
-        main{
-            padding-block: 4rem;
-        }
-    }
-
-    /*Estilos de Sobre-Nosotros*/
-
-    .PanFontSubTitles {
-        font-family: "Bebas Neue", sans-serif;
-        color: var(--color-texto);
-        text-shadow: 
-            -1px -1px 0 black,  
-             1px -1px 0 black,
-            -1px  1px 0 black,
-             1px  1px 0 black;
-        font-size: 1.5rem;
-    }
-
-    .PanImgTutoStyle{
-        border: 2px solid black;
-        border-radius: 30px;
-        max-width: 100%;
-        max-width: 800px;
-    }
-
-    /*Estilos de contacto*/
-
-    .PanRedes{
-        text-decoration: none;
-    }
-
-    .PanFontRedes{
-        font-size: 50px;
-    }
-
-    .PanInstagramBorder{
-        border: 5px solid rgba(208,29,194,255);
-        border-radius: 20px;
-        overflow: hidden;
-    }
-
-    .PanInstagram{
-        background-color: rgba(254,122,34,255);
-        color: rgba(252,19,107,255);
-    }
-
-    .PanFacebookBorder{
-        border: 5px solid rgba(2,23,93,255);
-        border-radius: 20px;
-        overflow: hidden;
-    }
-
-    .PanFacebook{
-        background-color: rgba(47,116,248,255);
-        color: rgba(233,240,254,255);
-    }
-
-    .PanTikTokBorder{
-        border: 5px solid rgba(42,240,234,255);
-        border-radius: 20px;
-        overflow: hidden;
-    }
-
-    .PanTikTok {
-        background-color: black;
-        color: rgba(254,40,88,255);
-    }
-
-    .PanInstagram:hover{
-        background-color: var(--color-encabezado);
-        color: var(--color-menu);
-    }
-
-    .PanFacebook:hover{
-        background-color: var(--color-encabezado);
-        color: var(--color-menu);
-    }
-
-    .PanTikTok:hover{
-        background-color: var(--color-encabezado);
-        color: var(--color-menu);
-    }
-
-    /*Estilos Inicio de Sesión y Profesores*/
-
-    .PanFontIDSyProfes:hover{
-        text-shadow: 
-        -1px -1px 0 var(--color-menu),  
-         1px -1px 0 var(--color-menu),
-        -1px  1px 0 var(--color-menu),
-         1px  1px 0 var(--color-menu);
-        color: black;
-    }
+/*# sourceMappingURL=style.css.map */

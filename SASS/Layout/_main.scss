@@ -1,0 +1,100 @@
+@use '../Variables/fuentes' as *;
+@use '../Variables/colores' as *;
+@use '../Mixin/mixin' as mix;
+
+.PanMainStyle {
+  background-color: $color-fondo;
+  flex: 1;
+  padding-block: 1rem;
+  
+  .PanFontTitles {
+    font-family: $fuente-texto;
+    color: $color-texto;
+    @include mix.txt-border;
+    font-size: 1.9rem;
+  }
+}
+
+@media (min-width: 768px) and (min-height: 1024px) {
+  main{
+      padding-block: 4rem;
+  }
+}
+
+/*Estilos del main Sobre nosotros*/
+
+.PanMainStyle {
+  .PanFontSubTitles {
+    font-family: $fuente-texto;
+    color: $color-texto;
+    @include mix.txt-border;
+    font-size: 1.5rem;
+  }
+
+  .PanImgTutoStyle{
+    border: 2px solid black;
+    border-radius: 30px;
+    max-width: 100%;
+    max-width: 800px;
+  }
+}
+
+/*Estilos del main Contacto*/
+
+.PanMainStyle {
+  
+  .PanRedes{
+    text-decoration: none;
+  }
+  .PanFontRedes{
+    font-size: 50px;
+  }
+}
+
+.PanMainStyle {
+
+  .PanInstagram{
+    @include mix.button-style (rgba(254,122,34,255), rgba(252,19,107,255));
+
+    &:hover {
+      @include mix.button-style-change;
+    }
+  }
+
+  .PanFacebook{
+    @include mix.button-style (rgba(47,116,248,255), rgba(233,240,254,255));
+    
+    &:hover {
+      @include mix.button-style-change;
+    }
+  }
+
+  .PanTikTok{
+    @include mix.button-style (black, rgba(254,40,88,255));
+    
+    &:hover {
+      @include mix.button-style-change;
+    }
+  }
+
+  .PanInstagramBorder {
+    @include mix.button-border-style (rgba(208,29,194,255));
+  }
+  
+  .PanFacebookBorder {
+    @include mix.button-border-style (rgba(2,23,93,255));
+  }
+  
+  .PanTikTokBorder {
+    @include mix.button-border-style (rgba(42,240,234,255));
+  }
+
+}
+
+/*Estilos del main Profesores e Inicio de sesión*/
+
+.PanMainStyle{
+  .PanFontNav:hover{
+    @include mix.nav-text-border;
+  }
+}
