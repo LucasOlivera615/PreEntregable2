@@ -1,5 +1,6 @@
 @use '../Variables/fuentes' as *;
 @use '../Variables/colores' as *;
+@use '../Animaciones/animaciones' as *;
 @use '../Mixin/mixin' as mix;
 
 .PanMainStyle {
@@ -54,7 +55,10 @@
 .PanMainStyle {
 
   .PanInstagram{
+    opacity: 0;
+    animation: FadeInRight 1s ease forwards;
     @include mix.button-style (rgba(254,122,34,255), rgba(252,19,107,255));
+    
 
     &:hover {
       @include mix.button-style-change;
@@ -62,6 +66,9 @@
   }
 
   .PanFacebook{
+    opacity: 0;
+    animation: FadeInLeft 1s ease forwards;
+    animation-delay: 1s;
     @include mix.button-style (rgba(47,116,248,255), rgba(233,240,254,255));
     
     &:hover {
@@ -70,6 +77,9 @@
   }
 
   .PanTikTok{
+    opacity: 0;
+    animation: FadeInUp 1s ease forwards;
+    animation-delay: 2s;
     @include mix.button-style (black, rgba(254,40,88,255));
     
     &:hover {

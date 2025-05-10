@@ -38,6 +38,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 body {
@@ -56,6 +57,36 @@ header .PanFontNavSize {
   font-size: 2.5rem;
 }
 
+@keyframes FadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes FadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes FadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 .PanMainStyle {
   background-color: rgb(68, 88, 100);
   flex: 1;
@@ -96,31 +127,42 @@ header .PanFontNavSize {
 }
 
 .PanMainStyle .PanInstagram {
+  opacity: 0;
+  animation: FadeInRight 1s ease forwards;
   background-color: rgb(254, 122, 34);
   color: rgb(252, 19, 107);
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 .PanMainStyle .PanInstagram:hover {
   background-color: rgb(245, 245, 220);
   color: rgb(123, 231, 243);
+  transform: scale(1.05);
 }
 .PanMainStyle .PanFacebook {
+  opacity: 0;
+  animation: FadeInLeft 1s ease forwards;
+  animation-delay: 1s;
   background-color: rgb(47, 116, 248);
   color: rgb(233, 240, 254);
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 .PanMainStyle .PanFacebook:hover {
   background-color: rgb(245, 245, 220);
   color: rgb(123, 231, 243);
+  transform: scale(1.05);
 }
 .PanMainStyle .PanTikTok {
+  opacity: 0;
+  animation: FadeInUp 1s ease forwards;
+  animation-delay: 2s;
   background-color: black;
   color: rgb(254, 40, 88);
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 .PanMainStyle .PanTikTok:hover {
   background-color: rgb(245, 245, 220);
   color: rgb(123, 231, 243);
+  transform: scale(1.05);
 }
 .PanMainStyle .PanInstagramBorder {
   border: 5px solid rgb(208, 29, 194);
