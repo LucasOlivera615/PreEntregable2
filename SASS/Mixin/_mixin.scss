@@ -15,6 +15,7 @@
     background-color: $color-head-foot;
     color: $color-menu;
     transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
 }
 
 @mixin txt-border {
@@ -44,5 +45,5 @@
 @mixin button-style ($bg-color, $color) {
     background-color: $bg-color;
     color: $color;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }

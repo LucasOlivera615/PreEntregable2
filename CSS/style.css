@@ -47,6 +47,9 @@ body {
   flex-direction: column;
 }
 
+header {
+  animation: FadeInDownHeader 0.5s ease forwards;
+}
 header .cambio:hover {
   background-color: rgba(45, 46, 46, 0.349);
   text-shadow: -1px -1px 0 rgb(123, 231, 243), 1px -1px 0 rgb(123, 231, 243), -1px 1px 0 rgb(123, 231, 243), 1px 1px 0 rgb(123, 231, 243);
@@ -64,7 +67,7 @@ header .PanFontNavSize {
   }
   to {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateX(0), scale(1.05);
   }
 }
 @keyframes FadeInLeft {
@@ -74,23 +77,94 @@ header .PanFontNavSize {
   }
   to {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateX(0), scale(1.05);
   }
 }
 @keyframes FadeInUp {
   from {
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0), scale(1.05);
+  }
+}
+@keyframes FadeInUpFooter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
     transform: translateX(0);
   }
 }
+@keyframes FadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes FadeInDownHeader {
+  from {
+    opacity: 0;
+    transform: translateY(-90px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .PanMainStyle {
   background-color: rgb(68, 88, 100);
   flex: 1;
   padding-block: 1rem;
+}
+.PanMainStyle section div .PanPrimerTitulo {
+  opacity: 0;
+  animation: FadeInRight 2s ease forwards;
+  animation-delay: 0.3s;
+}
+.PanMainStyle section div .PanPrimerTXT {
+  opacity: 0;
+  animation: FadeInRight 2s ease forwards;
+  animation-delay: 1.3s;
+}
+.PanMainStyle section .formulario-de-busqueda {
+  opacity: 0;
+  animation: FadeInRight 2s ease forwards, float 3s ease-in-out infinite;
+  animation-delay: 2.3s;
+}
+.PanMainStyle section .PanMapAnimation {
+  opacity: 0;
+  animation: FadeInRight 2s ease forwards;
+  animation-delay: 2.3s;
+}
+.PanMainStyle section div .PanPrimerSubTitulo {
+  opacity: 0;
+  animation: FadeInRight 2s ease forwards;
+  animation-delay: 3.3s;
+}
+.PanMainStyle section div .PanSegundoTXT {
+  opacity: 0;
+  animation: FadeInRight 2s ease forwards;
+  animation-delay: 4.3s;
 }
 .PanMainStyle .PanFontTitles {
   font-family: "Bebas Neue", sans-serif;
@@ -105,22 +179,81 @@ header .PanFontNavSize {
   }
 }
 /*Estilos del main Sobre nosotros*/
-.PanMainStyle .PanFontSubTitles {
+.PanMainStyle main div .PanSegundoTitulo {
+  opacity: 0;
+  animation: FadeInRight 2s ease forwards;
+  animation-delay: 2.3s;
+}
+.PanMainStyle main div .PanFontSubTitles {
   font-family: "Bebas Neue", sans-serif;
   color: rgb(100, 185, 195);
   text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
   font-size: 1.5rem;
 }
-.PanMainStyle .PanImgTutoStyle {
+.PanMainStyle main div .PanImgTutoStyle {
   border: 2px solid black;
   border-radius: 30px;
   max-width: 100%;
   max-width: 800px;
 }
+.PanMainStyle main div .PanTercerTXT {
+  opacity: 0;
+  animation: FadeInRight 1s ease forwards;
+  animation-delay: 3.3s;
+}
+.PanMainStyle main div .PanSegundoSubTitulo {
+  opacity: 0;
+  animation: FadeInRight 1s ease forwards;
+  animation-delay: 4.3s;
+}
+.PanMainStyle main div .PanCuartoTXT {
+  opacity: 0;
+  animation: FadeInRight 1s ease forwards;
+  animation-delay: 5.3s;
+}
+.PanMainStyle main div .PanImg-1 {
+  opacity: 0;
+  animation: FadeInLeft 1s ease forwards;
+  animation-delay: 6.3s;
+}
+.PanMainStyle main div .PanTercerSubTitulo {
+  opacity: 0;
+  animation: FadeInRight 1s ease forwards;
+  animation-delay: 7.3s;
+}
+.PanMainStyle main div .PanQuintoTXT {
+  opacity: 0;
+  animation: FadeInRight 1s ease forwards;
+  animation-delay: 8.3s;
+}
+.PanMainStyle main div .PanImg-2 {
+  opacity: 0;
+  animation: FadeInLeft 1s ease forwards;
+  animation-delay: 9.3s;
+}
+.PanMainStyle main div .PanTercerTitulo {
+  opacity: 0;
+  animation: FadeInRight 1s ease forwards;
+  animation-delay: 10.3s;
+}
+.PanMainStyle main div .PanSextoTXT {
+  opacity: 0;
+  animation: FadeInRight 1s ease forwards;
+  animation-delay: 11.3s;
+}
 
 /*Estilos del main Contacto*/
+.PanMainStyle .DerForm {
+  opacity: 0;
+  animation: FadeInLeft 1s ease forwards;
+  animation-delay: 3.3s;
+}
 .PanMainStyle .PanRedes {
   text-decoration: none;
+}
+.PanMainStyle .PanProfesPointer {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
 }
 .PanMainStyle .PanFontRedes {
   font-size: 50px;
@@ -129,40 +262,44 @@ header .PanFontNavSize {
 .PanMainStyle .PanInstagram {
   opacity: 0;
   animation: FadeInRight 1s ease forwards;
+  animation-delay: 5.3s;
   background-color: rgb(254, 122, 34);
   color: rgb(252, 19, 107);
-  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .PanMainStyle .PanInstagram:hover {
   background-color: rgb(245, 245, 220);
   color: rgb(123, 231, 243);
   transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
 }
 .PanMainStyle .PanFacebook {
   opacity: 0;
   animation: FadeInLeft 1s ease forwards;
-  animation-delay: 1s;
+  animation-delay: 5.5s;
   background-color: rgb(47, 116, 248);
   color: rgb(233, 240, 254);
-  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .PanMainStyle .PanFacebook:hover {
   background-color: rgb(245, 245, 220);
   color: rgb(123, 231, 243);
   transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
 }
 .PanMainStyle .PanTikTok {
   opacity: 0;
   animation: FadeInUp 1s ease forwards;
-  animation-delay: 2s;
+  animation-delay: 5.7s;
   background-color: black;
   color: rgb(254, 40, 88);
-  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .PanMainStyle .PanTikTok:hover {
   background-color: rgb(245, 245, 220);
   color: rgb(123, 231, 243);
   transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
 }
 .PanMainStyle .PanInstagramBorder {
   border: 5px solid rgb(208, 29, 194);
@@ -187,6 +324,10 @@ header .PanFontNavSize {
   transition: all 0.3s ease-in-out;
 }
 
+footer {
+  opacity: 0;
+  animation: FadeInUpFooter 0.5s ease forwards;
+}
 footer .PanFontFootSize {
   font-size: 1.2rem;
 }
@@ -228,6 +369,11 @@ footer .PanFontFootSize:hover {
   border-radius: 30px;
   max-width: 100%;
   max-width: 600px;
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+.PanMapStyle:hover {
+  transform: scale(1.06);
 }
 
 /*# sourceMappingURL=style.css.map */

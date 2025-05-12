@@ -2,7 +2,9 @@
 @use '../Mixin/mixin' as mix;
 
 footer {
-    
+    opacity: 0;
+    animation: FadeInUpFooter 0.5s ease forwards;
+
     .PanFontFootSize {
         font-size: 1.2rem;
         
