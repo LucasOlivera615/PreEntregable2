@@ -27,18 +27,18 @@
     }
     to {
         opacity: 1;
-        transform: translateX(0), scale(1.05);
+        transform: translateY(0), scale(1.05);
     }
 }
 
 @keyframes FadeInUpFooter {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(90px);
     }
     to {
         opacity: 1;
-        transform: translateX(0);
+        transform: translateY(0);
     }
 }
 
@@ -49,7 +49,7 @@
     }
     to {
         opacity: 1;
-        transform: translateX(0);
+        transform: translateY(0);
     }
 }
 
@@ -60,7 +60,7 @@
     }
     to {
         opacity: 1;
-        transform: translateX(0);
+        transform: translateY(0);
     }
 }
 
