@@ -47,4 +47,10 @@
     &:hover{
       transform: scale(1.06);
     }
+
+    .PanTxt {
+      background-color: $color-fondo;
+      border-radius: 30px;
+      padding: 10px;
+    }
   }

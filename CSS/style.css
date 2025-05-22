@@ -375,5 +375,10 @@ footer .PanFontFootSize:hover {
 .PanMapStyle:hover {
   transform: scale(1.06);
 }
+.PanMapStyle .PanTxt {
+  background-color: rgb(68, 88, 100);
+  border-radius: 30px;
+  padding: 10px;
+}
 
 /*# sourceMappingURL=style.css.map */

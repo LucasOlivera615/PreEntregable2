@@ -67,13 +67,13 @@
       </div>
       <div class="PanMapAnimation">
         <div class="PanMapContainer col-12 d-flex justify-content-center mt-3 text-center">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d6547.095930250098!2d-56.171809242186136!3d-34.86758394157492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sgimnasios!5e0!3m2!1ses-419!2suy!4v1741706143697!5m2!1ses-419!2suy" 
-            width="600" 
-            height="450"
-            class="PanMapStyle w-100"
-          ></iframe> <!--Mapa de Google con la ubicación de los distintos gimnasios, cuando aprenda javascript, esto se basará en la IP del usuario.-->
+          <div id="map-placeholder" class="d-flex align-items-center justify-content-center PanMapStyle w-100" style="height: 450px; background-color: #f0f0f0;">
+            <p class="PanTxt mt-5">Haz clic en el botón para cargar el mapa de gimnasios.</p>
+          </div>
         </div>
+        <div class="text-center mt-3">
+          <button onclick="loadMap()" class="PanButStyle">Cargar mapa</button>
+        </div>  <!--Mapa de Google con la ubicación de los distintos gimnasios, cuando aprenda javascript, esto se basará en la IP del usuario.-->
       </div>
     </section>
     <section class="row flex-column align-items-center">
@@ -105,5 +105,19 @@
   </footer>
   <!--Script de BS-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+  <!--Script que permite cargar el mapa solo si el usuario acepta cookies de terceros implicitamente-->
+  <script>
+  function loadMap() {
+    const iframe = document.createElement("iframe");
+    iframe.src = "https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d6547.095930250098!2d-56.171809242186136!3d-34.86758394157492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sgimnasios!5e0!3m2!1ses-419!2suy!4v1741706143697!5m2!1ses-419!2suy";
+    iframe.width = "600";
+    iframe.height = "450";
+    iframe.className = "PanMapStyle w-100";
+    iframe.style.border = "0";
+    iframe.loading = "lazy";
+    iframe.allowFullscreen = "";
+    document.getElementById("map-placeholder").replaceWith(iframe);
+  }
+</script>
 </body>
 </html>
